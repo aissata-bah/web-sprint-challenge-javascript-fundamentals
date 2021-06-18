@@ -137,8 +137,8 @@ function multiply(num1, num2){
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(first, last){
-   return (`Hello ${first-name} ${last-name}, nice to meet you!`)
+function greeting(first_name, last_name){
+   return (`Hello ${first_name} ${last_name}, nice to meet you!`)
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -159,10 +159,10 @@ function greeting(first, last){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-  this.length = length;
-  this.width = width;
-  this.height = height;
+function CuboidMaker(attr){
+  this.length = attr.length;
+  this.width = attr.width;
+  this.height = attr.height;
 }
 
 
@@ -171,7 +171,7 @@ function CuboidMaker(length, width, height){
   Formula for cuboid volume: length * width * height   */
 
   CuboidMaker.prototype.volume = function () {
-    return length * width * height;
+    return this.length * this.width * this.height;
   }
 
 
@@ -182,7 +182,7 @@ function CuboidMaker(length, width, height){
   2 * (length * width + length * height + width * height)  */
 
   CuboidMaker.prototype.surfaceArea = function () {
-    return 2 * (length * width + length * height + width * height);
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 
 
