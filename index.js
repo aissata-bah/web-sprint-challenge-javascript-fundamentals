@@ -208,7 +208,8 @@ function CuboidMaker(attr){
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo extends CuboidMaker{
-
+constructor (attr)
+{super (attr)}
 }
 
 
