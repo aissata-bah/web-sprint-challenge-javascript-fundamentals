@@ -67,7 +67,7 @@ const zooAnimals = [
     array.forEach(function(item){
       return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
       });
-      return displayName;
+      return displayNames;
   }
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -76,12 +76,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*arr,*/item){
+  function lowerCaseNames(array){
 
-    const lowerCaseNames = zooAnimals.map(function(item){
+    const newLowerCaseNames = array.map(function(item){
       return item.animal_name.toLowerCase();
     });
-    return item.animal_name
+    return newLowerCaseNames
   }
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -89,11 +89,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*arr,*/item){
-    const newArray = zooAnimals.filter(function(item){
+  function lowPopulationAnimals(array){
+    const newArray = array.filter(function(item){
       return item.population < 5;
     });
-    
+    return newArray;
   }
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -106,6 +106,7 @@ const zooAnimals = [
     const totalPopulation = zooAnimals.reduce(function(acc, item){
       return acc + item.population;
     },0);
+    return totalPopulation;
   }
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -120,11 +121,12 @@ const zooAnimals = [
    return cb(a,b);
   }
   
+  
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
 function add(num1, num2){
-  const add = (num1, num2) => num1 + num2;
+  return num1 + num2;
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
