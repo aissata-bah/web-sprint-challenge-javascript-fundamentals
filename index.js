@@ -170,6 +170,7 @@ function CuboidMaker(attr){
 
   CuboidMaker.prototype.volume = function () {
     return this.length * this.width * this.height;
+    
   }
 
 
