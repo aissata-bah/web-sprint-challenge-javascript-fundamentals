@@ -18,7 +18,7 @@ myFunction();
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 
-
+// Nested functions are just the child of the parent function. The outer function is the parent and the inner is the child. Whatever is inside of the function (the child) can inherit from the other function (the parent), hence why the nested function can access the variable internal that first appears in the parent function. The line 12 in this is the closure being that it is reaching out of its scope to get a variable that is defined in the outer function.
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -28,12 +28,33 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(arr) {
+  let fullArr = [];
+  let sum = 0;
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
+  arr.sort(function(a, b) {
+      return a - b
+  });
+
+  for (let i = arr[0]; i <= arr[1]; i++) {
+      fullArr.push(i);
   }
- 
 
+  sum = fullArr.reduce(reducer);
+
+  return sum;
+}
+  //   let count = 0;
+//   for (let i = 0; i < number; i++) {
+//     return function counter() {
+//       return count++;
+//      }
+//   }
+//   return Math.sum(4);
+// }
+
+ 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
 
@@ -57,9 +78,11 @@ const zooAnimals = [
   */
 
   function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+   const animalNames = [];
+   zooAnimals.forEach(function(item)){
+     return animalNames.push(name: `${name}, scientific: ${scientific name});
+   }
   }
-  
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
